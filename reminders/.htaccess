@@ -1,0 +1,8 @@
+# FOR URL REWRITING
+# PG
+<IfModule mod_rewrite.c>
+RewriteEngine on
+
+# for index
+RewriteRule ^[\w]/?$ index.php
+</IfModule>

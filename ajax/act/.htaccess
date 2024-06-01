@@ -1,0 +1,45 @@
+# FOR URL REWRITING
+# PG
+<IfModule mod_rewrite.c>
+RewriteEngine on
+
+# for sign up
+RewriteRule ^sp/?$ sign_up.xhr.php
+
+# for login
+RewriteRule ^l/?$ login.xhr.php
+
+# for sign out
+RewriteRule ^sg/?$ sign_out.xhr.php
+
+# for change password
+RewriteRule ^cp/?$ change_password.xhr.php
+
+# for delete account
+RewriteRule ^da/?$ delete_account.xhr.php
+
+# for change image
+RewriteRule ^ci/?$ change_image.xhr.php
+
+# for update_patient_profile
+RewriteRule ^upp/?$ update_patient_profile.xhr.php
+
+# for add_health_condition
+RewriteRule ^ahc/?$ add_health_condition.xhr.php
+
+# for add_medication
+RewriteRule ^amd/?$ add_medication.xhr.php
+
+# for confirm adherence
+RewriteRule ^ca/([\w]+)/([\d]+)/?$ confirm_adherence.xhr.php?st=$1&pmaid=$2
+
+# for send quidance_request
+RewriteRule ^sgr/([\d]+)/([\d]+)/?$ send_guidance_request.xhr.php?phid=$1&did=$2
+
+# for delete guidance request
+RewriteRule ^dgr/([\w]+)/([\d]+)/?$ delete_guidance_request.xhr.php?ty=$1&grid=$2
+
+# for insert message
+RewriteRule ^im/?$ insert_message.xhr.php
+
+</IfModule>

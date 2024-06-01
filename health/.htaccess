@@ -1,0 +1,17 @@
+# FOR URL REWRITING
+# PG
+<IfModule mod_rewrite.c>
+RewriteEngine on
+
+# for health condition
+RewriteRule ^health_condition/([\d]*)/?$ health_condition.enc.php?val=$1
+
+# for medication
+RewriteRule ^medication/([\d]*)/?$ medication.enc.php?val=$1
+
+# for medical professional
+RewriteRule ^medical_professional/([\w\s\-\_]*)/?$ medical_professional.enc.php?val=$1
+
+# for index
+RewriteRule ^[\w]/?$ index.php
+</IfModule>

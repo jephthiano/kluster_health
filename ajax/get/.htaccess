@@ -1,0 +1,14 @@
+# FOR URL REWRITING
+# ACT
+<IfModule mod_rewrite.c>
+RewriteEngine on
+
+# for get patient data
+RewriteRule ^gepid/([\w]+)/([\w\d\s\_\-]*)/?$ get_patient_data.xhr.php?value=$1&id=$2
+
+# for get doctor data
+RewriteRule ^gedd/([\w]+)/([\w\d\s\_\-]*)/?$ get_doctor_data.xhr.php?value=$1&id=$2
+
+# for get num row
+RewriteRule ^genr/([\w]+)/([\w\d\s\_\-]*)/?$ get_num_row.xhr.php?value=$1&id=$2
+</IfModule>

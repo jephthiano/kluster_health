@@ -1,0 +1,32 @@
+# FOR URL REWRITING
+# PG
+<IfModule mod_rewrite.c>
+RewriteEngine on
+
+# for edit_profile
+RewriteRule ^edit_profile/?$ edit_profile.enc.php
+
+# for account security
+RewriteRule ^account_security/?$ account_security.enc.php
+
+# for password
+RewriteRule ^password/?$ password.enc.php
+
+# for email
+RewriteRule ^email/?$ email.enc.php
+
+# for mobile_number
+RewriteRule ^mobile_number/?$ mobile_number.enc.php
+
+# for notification
+RewriteRule ^notification/?$ notification.enc.php
+
+# for delete account
+RewriteRule ^delete_account/?$ delete_account.enc.php
+
+# for medical professional
+RewriteRule ^medical_professional/?$ medical_professional.enc.php
+
+# for index
+RewriteRule ^[\w]/?$ index.php
+</IfModule>

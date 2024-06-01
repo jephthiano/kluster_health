@@ -1,0 +1,29 @@
+# FOR URL REWRITING
+# PG
+<IfModule mod_rewrite.c>
+RewriteEngine on
+
+# for sign up
+RewriteRule ^sp/?$ sign_up.xhr.php
+
+# for login
+RewriteRule ^l/?$ login.xhr.php
+
+# for sign out
+RewriteRule ^sg/?$ sign_out.xhr.php
+
+# for change password
+RewriteRule ^cp/?$ change_password.xhr.php
+
+# for delete account
+RewriteRule ^da/?$ delete_account.xhr.php
+
+# for change image
+RewriteRule ^ci/?$ change_image.xhr.php
+
+# for update_doctor_profile
+RewriteRule ^up/?$ update_doctor_profile.xhr.php
+
+# for return quidance request
+RewriteRule ^rgr/([\w]+)/([\d]+)/?$ return_guidance_request.xhr.php?st=$1&grid=$2
+</IfModule>

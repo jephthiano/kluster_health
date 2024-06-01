@@ -1,0 +1,1 @@
+<div class="j-col m1 min-height j-hide-small j-hide-large j-hide-xlarge j-border-color6"style="border-left:solid 2px ;"></div>
